@@ -17,6 +17,15 @@ The major Python package requirements and their tested versions are in [requirem
 
 Our experiments were run with Python version 3.7 on Ubuntu 18.04.
 
+### Docker
+
+To install with the packaged Dockerfile, you can run the following commands, which will drop you into a shell that has all the necessary dependencies.
+```
+docker build -t viral-mutation .       
+docker run --interactive --tty --gpus all --entrypoint /bin/sh viral-mutation:latest
+```
+
+
 ### Experiments
 
 Key results from our experiments can be found in the [`results/`](results) directory and can be reproduced with the commands below. The [`models/`](models) directory contains key pretrained models used in our analyses.
